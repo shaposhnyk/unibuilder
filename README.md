@@ -30,7 +30,7 @@ URI uri = UniBuilder.Factory.of("http://petstore.swagger.io/v2")
     .param("status", "pending")       // second value query parameter status
     .build();
 
-// same as new URI("https://www.shaposhnyk.com/svc/clusters?expand=applicationBlock&itEnv=DEV&expand=hosts");
+// same as new URI("http://petstore.swagger.io/v2/pet/findByStatus?status=available&status=pending");
 ```
 
 ## Building URI in Kotlin
@@ -42,5 +42,5 @@ URI uri = UniBuilder.of("http://petstore.swagger.io/v2")
     .param("status", "pending")       // second value query parameter status
     .build();
 
-// same as URI("https://www.shaposhnyk.com/svc/clusters?expand=applicationBlock&itEnv=DEV&expand=hosts")
+// same as URI("http://petstore.swagger.io/v2/pet/findByStatus?status=available&status=pending")
 ```
