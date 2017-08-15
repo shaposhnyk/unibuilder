@@ -21,25 +21,25 @@ You can use Maven (actually not yet) by including the library:
 </dependency>
 ```
 
-## Building URI in Java:
+## Building URI in Java
 
 ```java
-URI uri = UniBuilder.Factory.of("https://www.shaposhnyk.com/svc")
-    .appendPath("/clusters?expand=applicationBlock")
-    .param("itEnv", "DEV")
-    .param("expand", "hosts")
+URI uri = UniBuilder.Factory.of("http://petstore.swagger.io/v2")
+    .appendPath("/pet/findByStatus")  // request path
+    .param("status", "available")     // first value query parameter status
+    .param("status", "pending")       // second value query parameter status
     .build();
 
 // same as new URI("https://www.shaposhnyk.com/svc/clusters?expand=applicationBlock&itEnv=DEV&expand=hosts");
 ```
 
-## Building URI in Kotlin:
+## Building URI in Kotlin
 
 ```kotlin
-URI uri = UniBuilder.of("https://www.shaposhnyk.com/svc")
-    .appendPath("/clusters?expand=applicationBlock")
-    .param("itEnv", "DEV")
-    .param("expand", "hosts")
+URI uri = UniBuilder.of("http://petstore.swagger.io/v2")
+    .appendPath("/pet/findByStatus")  // request path
+    .param("status", "available")     // first value query parameter status
+    .param("status", "pending")       // second value query parameter status
     .build();
 
 // same as URI("https://www.shaposhnyk.com/svc/clusters?expand=applicationBlock&itEnv=DEV&expand=hosts")
